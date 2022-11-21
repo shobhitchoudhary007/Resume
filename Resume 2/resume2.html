@@ -11,19 +11,27 @@
 </head>
 
 <body>
-    <div class="main">
+    <div>
+        <input type="text" id="inputName" placeholder="name">
+        <input type="text" id="inputContact" placeholder="contact">
+        <input type="text" id="inputEmail" placeholder="email">
+        <input type="text" id="inputAddress" placeholder="address">
+        <button type="button" id="submitButton">Create Your Resume</button>
+    </div>
+
+    <div id="mainContainer" style="display:none;" class="main">
         <div class="topsection">
             <img src="D:\Obdure Infotech\Projects\Resume\shobhit.jpeg" alt="" class="profile">
-            <p class="p1">Shobhit <span>Choudhary</span></p>
+            <p id="name" class="p1">Shobhit <span>Choudhary</span></p>
             <p class="p2">Web Developer</p>
         </div>
         <div class="clearfix"></div>
         <div class="coldiv4">
             <div class="contentbox" style="padding-left: 40px;">
                 <p class="head">Contact</p>
-                <p class="p3"><i class="fa fa-phone"></i>&nbsp;&nbsp; 8958843957</p>
-                <p class="p3"><i class="fa fa-envelope"></i>&nbsp;&nbsp; choudharyshobhit76@gmail.com</p>
-                <p class="p3"><i class="fa fa-home"></i>&nbsp;&nbsp; Rohta,Meerut,Uttar Pradesh</p>
+                <p id="contact" class="p3"><i class="fa fa-phone"></i>&nbsp;&nbsp; 8958843957</p>
+                <p id="email" class="p3"><i class="fa fa-envelope"></i>&nbsp;&nbsp; choudharyshobhit76@gmail.com</p>
+                <p id="address" class="p3"><i class="fa fa-home"></i>&nbsp;&nbsp; Rohta,Meerut,Uttar Pradesh</p>
                 <br>
                 <p class="head">My Skills</p>
                 <ul class="skills">
@@ -80,5 +88,22 @@
         </div>
     </div>
 </body>
+<script>
+    let subButton = document.getElementById("submitButton");
+    let nameInput = document.getElementById("inputName");
+    let contactInput = document.getElementById("inputContact");
+    let emailInput = document.getElementById("inputEmail");
+    let addressInput = document.getElementById("inputAddress");
+
+    subButton.addEventListener("click", subButtonClickHandler)
+
+    function subButtonClickHandler(e) {
+        document.getElementById("name").innerHTML = nameInput.value;
+        document.getElementById("contact").innerHTML = contactInput.value;
+        document.getElementById("email").innerHTML = emailInput.value;
+        document.getElementById("address").innerHTML= addressInput.value;
+        document.getElementById("mainContainer").style.display = "";
+    }
+</script>
 
 </html>

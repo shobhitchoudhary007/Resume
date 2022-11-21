@@ -10,12 +10,18 @@
 </head>
 
 <body>
+	<div>
+		<input type="text" id="inputName" placeholder="name">
+		<!-- <input type="text" id="inputSchoolName" placeholder="schoolName">
+		<input type="text" id="inputCollegeName" placeholder="collegeName"> -->
+		<button type="button" id="sbmitButton">Create your resume</button>
+	</div>
 	<div class="container">
 		<div class="left">
 			<div class="image">
 				<img src="D:\Obdure Infotech\Projects\Resume\shobhit.jpeg" alt="">
 			</div><br>
-			<div class="name">
+			<div id="name" class="name">
 				Shobhit Choudhary
 			</div>
 			<div>
@@ -85,5 +91,14 @@
 		</div>
 	</div>
 </body>
+<script>
+	let subButton=document.getElementById("submitButton")
+	let nameInput=document.getElementById("inputName");
 
+	subButton.addEventListener("click", subButtonClickHandler)
+
+	function subButtonClickHandler(e){
+		document.getElementById("name")=nameinput.value;
+	}
+</script>
 </html>
