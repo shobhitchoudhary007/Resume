@@ -98,7 +98,8 @@
 	subButton.addEventListener("click", subButtonClickHandler)
 
 	function subButtonClickHandler(e){
-		document.getElementById("name")=nameinput.value;
+		document.getElementById("name").innerHTML=nameinput.value;
+		document.getElementById("mainContainer").style.display = "flex";
 	}
 </script>
 </html>

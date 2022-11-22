@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resumeform.css">
+    <title>Resume Maker Form</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <form action="resume2.html" name="form" onsubmit="return check()">
+        <center>
+            <div class="heading">Resume Maker Form</div>
+        </center>
+        <div></div>
+        <table id="table">
+            <tr>
+                <td>
+                    <label for="name">Your Name</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your name" size="40" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="description"> Your Description</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your Description" size="40" name="description">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="contact">Contact Number</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Your contact number" size="40" name="contact">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Your Email ID</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your email id" size="40" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address">Your Address</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your address" size="40" name="address">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="skills">Your Skills</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your skill" size="20" name="skill1">
+                    <input type="text" placeholder="Enter your skill" size="20" name="skill2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your skill" size="20" name="skill3">
+                    <input type="text" placeholder="Enter your skill" size="20" name="skill4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your skill" size="20" name="skill5">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="awards">Your Awards</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your award" size="20" name="award1">
+                    <input type="text" placeholder="Enter your award" size="20" name="award2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lang">Your Languages</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your language" size="20" name="lang1">
+                    <input type="text" placeholder="Enter your language" size="20" name="lang2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="obj">Your Objective</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter your objective" size="40" name="obj">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="10th">10th Details</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter 10th pass year" size="20" name="year10">
+                    <input type="text" placeholder="Enter school name" size="20" name="sname10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="12th">12th Details</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter 12th pass year" size="20" name="year12">
+                    <input type="text" placeholder="Enter school name" size="20" name="sname12">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lang">Degree Details</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter degree name" size="20" name="cname">
+                    <input type="text" placeholder="Enter degree pass year" size="20" name="dyear">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter college name" size="20" name="dname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="button">Submit</button> &nbsp <input type="reset" name="" id="">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- <script>
+        function check() {
+            var n = document.form.name.value;
+            if (n == "") {
+                alert("Enter name");
+                return false;
+            }
+            n = document.form.description.value;
+            if (n == null || n == "") {
+                alert("Enter description");
+                return false;
+            }
+            n = document.form.contact.value;
+            if (n.length < 10) {
+                alert("Invalid phone Number");
+                return false;
+            }
+            n = document.form.email.value;
+            if (n == null || n == "") {
+                alert("Enter email id");
+                return false;
+            }
+            n = document.form.address.value;
+            if (n == null || n == "") {
+                alert("Enter address");
+                return false;
+            }
+            var t = window.confirm("do you want to submit");
+            if (t) {
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        }
+    </script> -->
+
+</body>
+
+</html>

@@ -11,19 +11,19 @@
 </head>
 
 <body>
-    <div>
+    <!-- <div>
         <input type="text" id="inputName" placeholder="name">
         <input type="text" id="inputContact" placeholder="contact">
         <input type="text" id="inputEmail" placeholder="email">
         <input type="text" id="inputAddress" placeholder="address">
         <button type="button" id="submitButton">Create Your Resume</button>
-    </div>
+    </div> -->
 
-    <div id="mainContainer" style="display:none;" class="main">
+    <div id="mainContainer"  class="main">
         <div class="topsection">
             <img src="D:\Obdure Infotech\Projects\Resume\shobhit.jpeg" alt="" class="profile">
-            <p id="name" class="p1">Shobhit <span>Choudhary</span></p>
-            <p class="p2">Web Developer</p>
+            <p id="name" class="p1">Shobhit <span>Choudhary</span> </p>
+            <p id="description" class="p2">Web Developer</p>
         </div>
         <div class="clearfix"></div>
         <div class="coldiv4">
@@ -35,27 +35,27 @@
                 <br>
                 <p class="head">My Skills</p>
                 <ul class="skills">
-                    <li><span>Web Design</span></li>
-                    <li><span>HTML</span></li>
-                    <li><span>CSS</span></li>
-                    <li><span>Java Script</span></li>
-                    <li><span>Git</span></li>
+                    <li id="skill1"><span>Web Design</span></li>
+                    <li id="skill2"><span>HTML</span></li>
+                    <li id="skill3"><span>CSS</span></li>
+                    <li id="skill4"><span>Java Script</span></li>
+                    <li id="skill5"><span>Git</span></li>
                 </ul>
                 <br>
                 <p class="head">Awards</p>
-                <p class="p3">Personality Development</p>
-                <p class="p3">Computer System Security</p>
+                <p id="award1" class="p3">Personality Development</p>
+                <p id="award2" class="p3">Computer System Security</p>
                 <br>
                 <p class="head">Languages</p>
-                <p class="p3">Hindi</p>
-                <p class="p3">English</p>
+                <p id="lang1" class="p3">Hindi</p>
+                <p id="lang2" class="p3">English</p>
             </div>
         </div>
         <div class="line"></div>
         <div class="coldiv8">
             <div class="contentbox">
                 <p class="head">Objective</p>
-                <p class="p3" style="font-size: 14px;">I seek challenging opportunities where I can fully use my skills
+                <p id="obj" class="p3" style="font-size: 14px;">I seek challenging opportunities where I can fully use my skills
                     for the success of the organization.
                 </p>
                 <br>
@@ -72,11 +72,14 @@
                 <br>
                 <p class="head">Education</p>
                 <p>10th</p>
-                <p class="p4">2017 <br> GGSPS</p>
+                <p id="year10" class="p4">2017</p>
+                <p id="sname10" class="p4">GGSPS</p>
                 <p>12th</p>
-                <p class="p4">2019 <br> GGSPS</p>
-                <p>B.Tech</p>
-                <p class="p4">2019-2023 <br> DVSIET</p>
+                <p id="year12" class="p4">2019</p>
+                <p id="sname12" class="p4">GGSPS</p>
+                <p id="dname" >B.Tech</p>
+                <p id="dyear" class="p4">2019-2023</p>
+                <p id="cname" class="p4">DVSIET</p>
                 <br>
                 <p class="head">Declaration</p>
                 <p class="p4">Hereby declare that all the information above is true and complete to the best of my
@@ -89,21 +92,25 @@
     </div>
 </body>
 <script>
-    let subButton = document.getElementById("submitButton");
-    let nameInput = document.getElementById("inputName");
-    let contactInput = document.getElementById("inputContact");
-    let emailInput = document.getElementById("inputEmail");
-    let addressInput = document.getElementById("inputAddress");
+    // let subButton = document.getElementById("submitButton");
+    // let nameInput = document.getElementById("inputName");
+    // let contactInput = document.getElementById("inputContact");
+    // let emailInput = document.getElementById("inputEmail");
+    // let addressInput = document.getElementById("inputAddress");
+    // subButton.addEventListener("click", subButtonClickHandler)
+    // function subButtonClickHandler(e) {
+    //     document.getElementById("name").innerHTML = nameInput.value;
+    //     document.getElementById("contact").innerHTML = contactInput.value;
+    //     document.getElementById("email").innerHTML = emailInput.value;
+    //     document.getElementById("address").innerHTML= addressInput.value;
+    //     document.getElementById("mainContainer").style.display = "";
+    // }
 
-    subButton.addEventListener("click", subButtonClickHandler)
-
-    function subButtonClickHandler(e) {
-        document.getElementById("name").innerHTML = nameInput.value;
-        document.getElementById("contact").innerHTML = contactInput.value;
-        document.getElementById("email").innerHTML = emailInput.value;
-        document.getElementById("address").innerHTML= addressInput.value;
-        document.getElementById("mainContainer").style.display = "";
-    }
+    let params= new URLSearchParams(location.search);
+    params.forEach(function(value, key){
+        console.log("value", value, "key", key);
+        document.getElementById(key).innerHTML=value;
+    })
 </script>
 
 </html>
